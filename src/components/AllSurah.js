@@ -2,6 +2,7 @@ import axios from "axios";
 import { Outfit } from "next/font/google";
 import useSWR from "swr";
 import SurahCard from "./SurahCard";
+import Link from "next/link";
 
 const fetcher = url => axios(url).then(x => x.data);
 const outfit = Outfit({ weight: ['400'], subsets: ['latin'] });
@@ -17,7 +18,9 @@ export default function AllSurah() {
                {data.map((x, idx) => {
                 return (
                     <div key={idx}>
-                        <SurahCard nomor={x.nomor} nama={x.nama.latin} arti={x.arti} arab={x.nama.arab} lokasi={x.lokasi} jumlahAyat={x.jumlah_ayat} />
+                        <Link href={`/${x.nomor}`}>
+                            <SurahCard nomor={x.nomor} nama={x.nama.latin} arti={x.arti} arab={x.nama.arab} lokasi={x.lokasi} jumlahAyat={x.jumlah_ayat} />
+                        </Link>
                     </div>
                 )
                })}
