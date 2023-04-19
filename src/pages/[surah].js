@@ -53,8 +53,8 @@ export default function Surah() {
                     <div className="py-8" key={idx}>
                         <section id={x.id}>
                             <div className="text-right">
-                                <p className={`${lpmq.className} text-3xl`}>{x.arab}</p>
-                                <p className="pt-4">{x.latin}</p>
+                                <p className={`${lpmq.className} text-3xl leading-[2.5em]`}>{x.arab}</p>
+                                <p>{x.latin}</p>
                             </div>
                             <div className="pt-8">
                                 <p dangerouslySetInnerHTML={{ __html: parseArti(x.nomor, x.arti) }} />
