@@ -61,7 +61,18 @@ export default function Surah() {
                             </div>
                             <div className="pt-8">
                                 <p dangerouslySetInnerHTML={{ __html: parseArti(x.nomor, x.arti) }} />
-                                {x.fn ? <p className="mt-2 italic text-xs font-bold">Footnote:<br/>{x.fn}</p> : ''}
+                                {x.fn ? <>
+                                  <p className="mt-2 italic text-xs font-bold">Footnote:</p>
+                                    <div>
+                                      <ul className="list-disc ml-5 text-xs">
+                                        {x.fn.map((xx, idxx) => {
+                                          return(
+                                            <li key={idxx}>{xx}</li>
+                                          )
+                                        })}
+                                      </ul>
+                                    </div>
+                                </> : ''}
                             </div>
                         </section>
                         <div className="divider"></div>
