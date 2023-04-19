@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { parseArti } from "@/common/functions";
-import { outfit } from '@/common/fonts';
+import { outfit, philosopher } from '@/common/fonts';
 
 const fetcher = url => axios(url).then(x => x.data);
 export default function Surah() {
@@ -44,8 +44,8 @@ export default function Surah() {
             )}
           </div>
 
-          <h2 className={`text-3xl text-center font-bold`}>{data.nama.latin} <span className="text-sm">{data.nama.arab}</span></h2>
-          <p className="text-center">{data.arti} - {data.jumlah_ayat} Ayat</p>
+          <h2 className={`${philosopher.className} text-3xl text-center font-bold`}>{data.nama.latin} <span className="text-sm">{data.nama.arab}</span></h2>
+          <p className="text-center">{data.lokasi} &#x2022; {data.arti} &#x2022; {data.jumlah_ayat} Ayat</p>
 
           <div className="py-16">
             {data.ayat.map((x, idx) => {
