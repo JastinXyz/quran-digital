@@ -67,7 +67,7 @@ export default function Surah() {
                                       <ul className="list-disc ml-5 text-xs">
                                         {x.fn.map((xx, idxx) => {
                                           return(
-                                            <li key={idxx}>{xx}</li>
+                                            <li key={idxx} className="italic">{xx}</li>
                                           )
                                         })}
                                       </ul>
