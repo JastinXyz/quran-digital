@@ -1,7 +1,7 @@
 <div align="center">
     <a href="https://quran.jstnlt.my.id"><img src="https://i.ibb.co/LCKHLw6/https-quran-jstnlt-my-id.png" alt="https-quran-jstnlt-my-id" border="0"></a>
     <br/>
-    <i>preview image.</i>
+    <i>Online Quran web with Indonesian translation.</i>
     <br/>
     <a href="https://quran.jstnlt.my.id"><i>https://quran.jstnlt.my.id</i></a>
 </div>
