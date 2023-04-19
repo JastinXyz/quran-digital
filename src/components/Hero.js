@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { FcSearch } from "react-icons/fc";
-import { Outfit } from "next/font/google";
-
-const outfit = Outfit({ weight: ['400'], subsets: ['latin'] });
+import { outfit } from '@/common/fonts';
 
 export default function Hero() {
     return (

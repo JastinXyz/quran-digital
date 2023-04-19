@@ -1,7 +1,4 @@
-import { Philosopher, Outfit } from 'next/font/google';
-
-const philosopher = Philosopher({ weight: ['400', '700'], subsets: ['latin'] });
-const outfit = Outfit({ weight: ['400'], subsets: ['latin'] });
+import { outfit, philosopher } from '@/common/fonts';
 
 export default function SurahCard({ nomor, nama, arti, arab, lokasi, jumlahAyat }) {
     return (

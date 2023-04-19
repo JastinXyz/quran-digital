@@ -1,8 +1,6 @@
-import { Philosopher } from 'next/font/google';
+import { philosopher } from '@/common/fonts';
 import { GoMarkGithub } from 'react-icons/go';
 import Link from 'next/link';
-
-const philosopher = Philosopher({ weight: ['400', '700'], subsets: ['latin'] });
 
 export default function Navbar() {
     return (

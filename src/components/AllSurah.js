@@ -1,12 +1,10 @@
 import axios from "axios";
-import { Outfit } from "next/font/google";
+import { outfit } from '@/common/fonts';
 import useSWR from "swr";
 import SurahCard from "./SurahCard";
 import Link from "next/link";
 
 const fetcher = url => axios(url).then(x => x.data);
-const outfit = Outfit({ weight: ['400'], subsets: ['latin'] });
-
 export default function AllSurah() {
     const { data, error } = useSWR('https://quran-api.jstnlt.my.id/surah?withoutAyat=1', fetcher)
 

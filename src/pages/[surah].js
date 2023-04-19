@@ -1,16 +1,13 @@
 import { useRouter } from "next/router"
 import axios from "axios";
-import { Philosopher, Outfit } from 'next/font/google';
 import useSWR from "swr";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { parseArti } from "@/common/functions";
+import { outfit } from '@/common/fonts';
 
 const fetcher = url => axios(url).then(x => x.data);
-const outfit = Outfit({ weight: ['400', '700'], subsets: ['latin'] });
-// const philosopher = Philosopher({ weight: ['400', '700'], subsets: ['latin'] });
-
 export default function Surah() {
     let router = useRouter();
     let { surah } = router.query;
