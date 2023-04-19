@@ -25,8 +25,10 @@ const philosopher = localFont({
   ],
 });
 
+const lpmq = localFont({ src: '../fonts/LPMQ/LPMQ IsepMisbah.ttf' });
 
 module.exports = {
     outfit,
-    philosopher
+    philosopher,
+    lpmq
 }

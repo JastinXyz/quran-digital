@@ -1,4 +1,4 @@
-import { outfit, philosopher } from '@/common/fonts';
+import { outfit, philosopher, lpmq } from '@/common/fonts';
 
 export default function SurahCard({ nomor, nama, arti, arab, lokasi, jumlahAyat }) {
     return (
@@ -14,8 +14,8 @@ export default function SurahCard({ nomor, nama, arti, arab, lokasi, jumlahAyat 
                             <p className={`${outfit.className} text-sm leading-none text-[#6C6C6C]`}>{arti}</p>
                         </div>
                         <div>
-                            <h2 className={`${philosopher.className} text-lg leading-none text-right`}>{arab}</h2>
-                            <p className={`${outfit.className} text-sm leading-none text-[#6C6C6C] text-right`}>{lokasi} - {jumlahAyat} Ayat</p>
+                            <h2 className={`${lpmq.className} text-lg leading-none text-right`}>{arab}</h2>
+                            <p className={`${outfit.className} mt-1 text-sm leading-none text-[#6C6C6C] text-right`}>{lokasi} - {jumlahAyat} Ayat</p>
                         </div>
                     </div>
                 </div>

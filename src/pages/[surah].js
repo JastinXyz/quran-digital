@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { parseArti } from "@/common/functions";
-import { outfit, philosopher } from '@/common/fonts';
+import { outfit, philosopher, lpmq } from '@/common/fonts';
 
 const fetcher = url => axios(url).then(x => x.data);
 export default function Surah() {
@@ -44,7 +44,7 @@ export default function Surah() {
             )}
           </div>
 
-          <h2 className={`${philosopher.className} text-3xl text-center font-bold`}>{data.nama.latin} <span className="text-sm">{data.nama.arab}</span></h2>
+          <h2 className={`${philosopher.className} text-3xl text-center font-bold`}>{data.nama.latin} <span className={`${lpmq.className} text-sm`}>{data.nama.arab}</span></h2>
           <p className="text-center">{data.lokasi} &#x2022; {data.arti} &#x2022; {data.jumlah_ayat} Ayat</p>
 
           <div className="py-16">
@@ -53,8 +53,8 @@ export default function Surah() {
                     <div className="py-8" key={idx}>
                         <section id={x.id}>
                             <div className="text-right">
-                                <p className="text-3xl">{x.arab}</p>
-                                <p>{x.latin}</p>
+                                <p className={`${lpmq.className} text-3xl`}>{x.arab}</p>
+                                <p className="pt-4">{x.latin}</p>
                             </div>
                             <div className="pt-8">
                                 <p dangerouslySetInnerHTML={{ __html: parseArti(x.nomor, x.arti) }} />
