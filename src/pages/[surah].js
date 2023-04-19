@@ -5,10 +5,11 @@ import useSWR from "swr";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { parseArti } from "@/common/functions";
 
 const fetcher = url => axios(url).then(x => x.data);
 const outfit = Outfit({ weight: ['400', '700'], subsets: ['latin'] });
-const philosopher = Philosopher({ weight: ['400', '700'], subsets: ['latin'] });
+// const philosopher = Philosopher({ weight: ['400', '700'], subsets: ['latin'] });
 
 export default function Surah() {
     let router = useRouter();
@@ -52,14 +53,14 @@ export default function Surah() {
           <div className="py-16">
             {data.ayat.map((x, idx) => {
                 return (
-                    <div className="py-8">
-                        <section key={idx} id={x.id}>
+                    <div className="py-8" key={idx}>
+                        <section id={x.id}>
                             <div className="text-right">
                                 <p className="text-3xl">{x.arab}</p>
                                 <p>{x.latin}</p>
                             </div>
                             <div className="pt-8">
-                                <p>{x.nomor}. {x.arti}</p>
+                                <p dangerouslySetInnerHTML={{ __html: parseArti(x.nomor, x.arti) }} />
                                 {x.fn ? <p className="mt-2 italic text-xs font-bold">Footnote:<br/>{x.fn}</p> : ''}
                             </div>
                         </section>
