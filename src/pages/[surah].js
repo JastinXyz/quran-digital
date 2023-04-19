@@ -14,14 +14,14 @@ export default function Surah() {
 
     const { data, error } = useSWR('https://quran-api.jstnlt.my.id/surah/' + surah, fetcher)
 
-    if (error) return <div className={`${outfit.className} p-8`}>Gagal memuat... Coba lagi dalam beberapa saat!</div>
-    if (!data) return <div className={`${outfit.className} p-8`}>loading...</div>
+    if (error) return <><Navbar /><div className={`${outfit.className} p-8`}>Gagal memuat... Coba lagi dalam beberapa saat!</div></>
+    if (!data) return <><Navbar /><div className={`${outfit.className} p-8`}>loading...</div></>
 
     return (
       <main className={outfit.className}>
         <Navbar />
-        <div className="px-24">
-          <div className="flex justify-between py-8">
+        <div className="px-6 md:px-24">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between gap-2 py-8">
             {data.surah_sebelumnya ? (
               <Link
                 href={`/${data.surah_sebelumnya.nomor}`}
