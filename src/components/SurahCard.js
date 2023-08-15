@@ -3,7 +3,7 @@ import { outfit, philosopher, lpmq } from '@/common/fonts';
 export default function SurahCard({ nomor, nama, arti, arab, lokasi, jumlahAyat }) {
     return (
         <>
-            <div className="p-6 bg-white border-2 border-base-300 rounded-2xl flex w-full h-full items-center">
+            <div className="p-6 bg-base-200 text-white border-2 border-base-300 rounded-2xl flex w-full h-full items-center">
                 <div className="flex-none pr-4">
                     <h1 className={`${philosopher.className} text-2xl font-bold`}>{nomor}</h1>
                 </div>

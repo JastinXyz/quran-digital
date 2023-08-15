@@ -12,7 +12,7 @@ export default function AllSurah() {
     if (!data) return <div className={`${outfit.className} p-8`}>loading...</div>
     return (
         <>
-            <div className="bg-base-200 px-4 md:px-8 lg:px-16 py-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <div className="bg-base-100 px-4 md:px-8 lg:px-16 py-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                {data.map((x, idx) => {
                 return (
                     <div key={idx}>
