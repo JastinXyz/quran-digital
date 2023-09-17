@@ -63,7 +63,7 @@ export default function Surah() {
               })}
             </div>
 
-            <NextPreviousButton data={data} />
+            <NextPreviousButton data={data} homeButton={true} />
           </div>
         </main>
       </>
