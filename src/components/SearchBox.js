@@ -8,7 +8,7 @@ function SearchBox({ refine }) {
       <input
         type="text"
         placeholder="Cari surah..."
-        className="input input-bordered md:w-96 rounded-full pl-12 text-black dark:text-white"
+        className="input input-bordered w-full rounded-full pl-12 text-black dark:text-white"
         onChange={(e) => refine(e.currentTarget.value)}
       />
     </div>

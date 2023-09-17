@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Navbar() {
     return (
       <>
-        <div className="navbar bg-[#018870] text-white">
+        <div className="navbar bg-observatory-700 text-white">
           <div className="flex-1">
             <Link href={'/'} className={`${philosopher.className} ml-5 normal-case text-xl font-bold`}>
                 Al-Quran Digital

@@ -5,16 +5,16 @@ import SearchBox from "./SearchBox";
 export default function Hero() {
     return (
       <div className={outfit.className}>
-        <div className="hero py-16 bg-[#018870]">
-          <div className="hero-content text-center">
-            <div className="max-w-md">
-              <div className="flex flex-col mx-auto">
+        <div className="py-16 bg-observatory-700">
+          <div className="text-center">
+              <div className="flex flex-col">
                 <div className="flex justify-center">
                     <Image src={'/img/logo.png'} width={180} height={180} alt="logo" />
                 </div>
-                <SearchBox />
+                <div className="px-16 lg:px-96">
+                  <SearchBox />
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </div>

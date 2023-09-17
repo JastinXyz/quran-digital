@@ -12,6 +12,21 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'observatory': {
+          '50': '#eefff9',
+          '100': '#c6ffef',
+          '200': '#8cffe0',
+          '300': '#4bfdcf',
+          '400': '#16ebbb',
+          '500': '#00cea2',
+          '600': '#00a686',
+          '700': '#018870',
+          '800': '#076858',
+          '900': '#0b5649',
+          '950': '#00352f',
+        },      
+      }
     },
   },
   plugins: [require('daisyui')],
