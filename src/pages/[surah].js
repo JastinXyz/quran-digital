@@ -3,10 +3,10 @@ import axios from "axios";
 import useSWR from "swr";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { parseArti } from "@/common/functions";
 import { outfit, philosopher, lpmq } from '@/common/fonts';
 import Head from "next/head";
+import NextPreviousButton from "@/components/NextPreviousButton";
 
 const fetcher = url => axios(url).then(x => x.data);
 export default function Surah() {
@@ -27,28 +27,7 @@ export default function Surah() {
         <main className={outfit.className}>
           <Navbar />
           <div className="px-6 md:px-24">
-            <div className="flex flex-col md:flex-row justify-center md:justify-between gap-2 py-8">
-              {data.surah_sebelumnya ? (
-                <Link
-                  href={`/${data.surah_sebelumnya.nomor}`}
-                  className="btn btn-sm rounded-full font-normal normal-case btn-accent btn-outline hover:!text-white"
-                >
-                  <MdChevronLeft /> Surah Sebelumnya {`(${data.surah_sebelumnya.nama.latin})`}
-                </Link>
-              ) : (
-                <div></div>
-              )}
-              {data.surah_selanjutnya ? (
-                <Link
-                  href={`/${data.surah_selanjutnya.nomor}`}
-                  className="btn btn-sm rounded-full font-normal normal-case btn-accent btn-outline hover:!text-white"
-                >
-                  Surah Selanjutnya {`(${data.surah_selanjutnya.nama.latin})`} <MdChevronRight />
-                </Link>
-              ) : (
-                <div></div>
-              )}
-            </div>
+            <NextPreviousButton data={data} />
 
             <h2 className={`${philosopher.className} text-3xl text-center font-bold`}>{data.nama.latin} <span className={`${lpmq.className} text-sm`}>{data.nama.arab}</span></h2>
             <p className="text-center">{data.lokasi} &#x2022; {data.arti} &#x2022; {data.jumlah_ayat} Ayat</p>
@@ -83,6 +62,8 @@ export default function Surah() {
                   )
               })}
             </div>
+
+            <NextPreviousButton data={data} />
           </div>
         </main>
       </>
