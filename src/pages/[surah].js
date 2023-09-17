@@ -34,10 +34,10 @@ export default function Surah() {
             <div className="py-16">
               {data.ayat.map((x, idx) => {
                   return (
-                      <div className="py-8" key={idx}>
+                      <div className="py-8 " key={idx}>
                           <section id={x.nomor}>
                               <div className="text-right">
-                                  <p className={`${lpmq.className} text-3xl leading-[2.5em]`}>{x.arab}</p>
+                                  <p className={`${lpmq.className} text-3xl leading-[2.5em] dark:text-white`}>{x.arab}</p>
                                   <p>{x.latin}</p>
                               </div>
                               <div className="pt-8">
