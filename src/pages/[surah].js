@@ -31,7 +31,7 @@ export default function Surah() {
             <h2 className={`${philosopher.className} text-3xl text-center font-bold`}>{data.nama.latin} <span className={`${lpmq.className} text-sm`}>{data.nama.arab}</span></h2>
             <p className="text-center">{data.lokasi} &#x2022; {data.arti} &#x2022; {data.jumlah_ayat} Ayat</p>
 
-            <div className="py-16">
+            <div className="pt-16">
               {data.ayat.map((x, idx) => {
                   return (
                       <div className="py-8 " key={idx}>
