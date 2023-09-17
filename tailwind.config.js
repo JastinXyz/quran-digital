@@ -29,5 +29,21 @@ module.exports = {
       }
     },
   },
+  // daisyui: {
+  //   themes: [
+  //     {
+  //       light: {
+  //         ...require("daisyui/src/colors/themes")["[data-theme=light]"],
+  //         "shortcut": "#242933",
+  //       },
+  //     },
+  //     {
+  //       dark: {
+  //         ...require("daisyui/src/colors/themes")["[data-theme=dark]"],
+  //         "shortcut": "#242933",
+  //       },
+  //     },
+  //   ],
+  // },
   plugins: [require('daisyui')],
 }

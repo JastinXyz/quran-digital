@@ -10,13 +10,14 @@ import NextPreviousButton from "@/components/NextPreviousButton";
 const fetcher = url => axios(url).then(x => x.data);
 export default function Surah() {
     let router = useRouter();
-    let { surah } = router.query;
+    let { ayat, surah } = router.query;
 
     const { data, error } = useSWR('https://quran-api.jstnlt.my.id/surah/' + surah, fetcher)
 
     if (error) return <><Navbar /><div className={`${outfit.className} p-8`}>Gagal memuat... Coba lagi dalam beberapa saat!</div></>
     if (!data) return <><Navbar /><div className={`${outfit.className} p-8`}>loading...</div></>
 
+    if(ayat) router.replace(`/${surah}#${ayat}`)
     return (
       <>
         <Head>
