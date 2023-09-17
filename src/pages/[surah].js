@@ -2,7 +2,6 @@ import { useRouter } from "next/router"
 import axios from "axios";
 import useSWR from "swr";
 import Navbar from "@/components/Navbar";
-import Link from "next/link";
 import { parseArti } from "@/common/functions";
 import { outfit, philosopher, lpmq } from '@/common/fonts';
 import Head from "next/head";
