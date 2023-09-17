@@ -1,4 +1,5 @@
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import Link from "next/link";
 
 export default function NextPreviousButton({ data }) {
   return (
