@@ -6,6 +6,7 @@ import { parseArti } from "@/common/functions";
 import { outfit, philosopher, lpmq } from '@/common/fonts';
 import Head from "next/head";
 import NextPreviousButton from "@/components/NextPreviousButton";
+import SurahSkeleton from "@/components/SurahSkeleton";
 
 const fetcher = url => axios(url).then(x => x.data);
 export default function Surah() {
@@ -15,7 +16,7 @@ export default function Surah() {
     const { data, error } = useSWR('https://quran-api.jstnlt.my.id/surah/' + surah, fetcher)
 
     if (error) return <><Navbar /><div className={`${outfit.className} p-8`}>Gagal memuat... Coba lagi dalam beberapa saat!</div></>
-    if (!data) return <><Navbar /><div className={`${outfit.className} p-8`}>loading...</div></>
+    if (!data) return <><Navbar /><div className={`p-8`}><SurahSkeleton /></div></>
 
     if(ayat) router.replace(`/${surah}#${ayat}`)
     return (
